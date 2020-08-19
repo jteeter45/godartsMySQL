@@ -1,0 +1,51 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New:</h2>  
+    <form method="POST" action="insert">
+      <p> Week, Team and Player have been selected.</p>
+      <input type="button" onclick="alert('Remember your week, team, & player choices!')" value="Reminder:" /><br />
+      <input type="hidden" name="week" />
+      <input type="hidden" name="team" />
+      <input type="hidden" name="player" />
+      <label> FiveSglsWin/Loss/DNP </label>
+      <select name="five_singles_wldnp" required>
+        <option value=""></option>
+        <option value="DNP">DNP</option>
+        <option value="Win">Win</option>
+        <option value="Loss">Loss</option>
+      </select>
+      <label> CrktSglsWin/Loss/DNP </label>
+      <select name="cricket_singles_wldnp" required>
+        <option value=""></option>
+        <option value="DNP">DNP</option>
+        <option value="Win">Win</option>
+        <option value="Loss">Loss</option>
+      </select>
+      <label> FiveDblsWin/Loss/DNP </label>
+      <select name="five_doubles_wldnp" required>
+        <option value=""></option>
+        <option value="DNP">DNP</option>
+        <option value="Win">Win</option>
+        <option value="Loss">Loss</option>
+      </select>
+      <label> CrktDblsWin/Loss/DNP </label>
+      <select name="cricket_doubles_wldnp" required>
+        <option value=""></option>
+        <option value="DNP">DNP</option>
+        <option value="Win">Win</option>
+        <option value="Loss">Loss</option>
+      </select>
+      <label> PlusOne </label><input type="number" name="plusone" required/><br />
+		if !ok {
+			fmt.Println("they chose no")
+		}
+      <label> TonEighty </label><input type="number" name="toneighty" required/><br />
+      <label> NineHtr </label><input type="number" name="ninehtr" required/><br />
+      <label> MVP  </label><input type="number" name="mvp" required/><br />
+      <label> HighOut </label><input type="number" name="highout" required/><br />
+      <label> SixBulls </label><input type="number" name="sixbulls" required/><br />
+      <input type="submit" value="Insert" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

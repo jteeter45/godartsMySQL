@@ -1,0 +1,10 @@
+{{ define "Playerset" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Player Set:</h2>  
+    <form method="POST" action="setplayers">
+      <p> Submit Player </p>
+      <input type="submit" value="Player" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

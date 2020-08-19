@@ -1,0 +1,22 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2>View:</h2>
+      <p>Id: {{ .Id }}</p>
+      <p>Week: {{ .Week }}</p>
+      <p>Team: {{ .Team }}</p>
+      <p>Player: {{ .Player }} </p>
+      <p>Five_singles_wldnp: {{ .Five_singles_wldnp }}</p>
+      <p>Cricket_singles_wldnp:  {{ .Cricket_singles_wldnp }}</p>
+      <p>Five_doubles_wldnp: {{ .Five_doubles_wldnp }}</p>
+      <p>Cricket_doubles_wldnp: {{ .Cricket_doubles_wldnp }}</p>
+      <p>Plusone: {{ .PlusOne }}</p>
+      <p>Toneighty: {{ .TonEighty }}</p>
+      <p>Ninehtr: {{ .NineHtr }}</p>
+      <p>MVP: {{ .MVP }}</p>
+      <p>Highout: {{ .HighOut }}</p>
+      <p>Sixbulls: {{ .SixBulls }}</p>
+      <br /><a href="/edit?id={{ .Id }}">Edit</a></p>
+      <br /><a href="/">Home</a> 
+  {{ template "Footer" }}
+{{ end }}

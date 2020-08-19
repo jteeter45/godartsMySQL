@@ -1,0 +1,26 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit:</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="id" value="{{ .Id }}" />
+      <input type="hidden" name="week" value="{{ .Week }}" />
+      <input type="hidden" name="team" value="{{ .Team }}" />
+      <input type="hidden" name="player" value="{{ .Player }}" />
+      <p>Week: {{ .Week }}</p>
+      <p>Team: {{ .Team }}</p>
+      <p>Player: {{ .Player }}</p>
+      <label> FiveSglsWldnp (Win/Loss/DNP) </label><input type="text" name="five_singles_wldnp" value="{{ .Five_singles_wldnp }}"  /><br />
+      <label> CrktSglsWldnp (Win/Loss/DNP) </label><input type="text" name="cricket_singles_wldnp" value="{{ .Cricket_singles_wldnp }}"  /><br />
+      <label> FiveblsWldnp (Win/Loss/DNP) </label><input type="text" name="five_doubles_wldnp" value="{{ .Five_doubles_wldnp }}"  /><br />
+      <label> CrktDblsWldnp (Win/Loss/DNP) </label><input type="text" name="cricket_doubles_wldnp" value="{{ .Cricket_doubles_wldnp }}"  /><br />
+      <label> Plusone </label><input type="text" name="plusone" value="{{ .PlusOne }}"  /><br /> 
+      <label> Toneighty </label><input type="text" name="toneighty" value="{{ .TonEighty }}"  /><br />    
+      <label> Ninehtr </label><input type="text" name="ninehtr" value="{{ .NineHtr }}"  /><br /> 
+      <label> MVP </label><input type="text" name="mvp" value="{{ .MVP }}"  /><br /> 
+      <label> Highout </label><input type="text" name="highout" value="{{ .HighOut }}"  /><br /> 
+      <label> Sixbulls </label><input type="text" name="sixbulls" value="{{ .SixBulls }}"  /><br /> 
+      <input type="submit" value="Update" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}

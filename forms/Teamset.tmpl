@@ -1,0 +1,10 @@
+{{ define "Teamset" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Team Set:</h2>  
+    <form method="POST" action="setteams">
+      <p> Submit Team </p>
+      <input type="submit" value="Team" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}
